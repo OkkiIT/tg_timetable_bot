@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import { config } from 'dotenv';
 import bot from '../constants/app.js';
+import startController from '../controllers/start.controller.js';
 
 class App {
   dbUrl = process.env._DB_URL;
@@ -16,9 +17,9 @@ class App {
   }
 
   async launchBot() {
-    bot.onText(/\/start/, (msg) => startController(msg));
-    bot.on('location',(msg) => locationController(msg));
-    bot.onText(/\/refreshDB/,(msg) => refreshDBController(msg));
+    bot.onText(/\/start/, msg => startController(msg));
+    bot.on('location', msg => locationController(msg));
+    bot.onText(/\/refreshDB/, msg => refreshDBController(msg));
   }
 }
 
