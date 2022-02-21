@@ -1,4 +1,4 @@
-import App from './services/app.service.js';
+import App from './app.js';
 import 'dotenv/config';
 
 const app = new App();

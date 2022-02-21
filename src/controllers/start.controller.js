@@ -1,4 +1,4 @@
-import bot from '../constants/app.js';
+import {bot} from '../app.js';
 import User from '../models/User.js';
 import { START_SCRIPTS } from '../constants/sctipts.js';
 import userService from '../services/user.service.js';

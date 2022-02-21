@@ -1,7 +1,11 @@
 import mongoose from 'mongoose';
-import { config } from 'dotenv';
-import bot from '../constants/app.js';
-import startController from '../controllers/start.controller.js';
+import TelegramBot from 'node-telegram-bot-api';
+import 'dotenv/config';
+import startController from './controllers/start.controller.js';
+
+const token = process.env._TOKEN;
+export const bot = new TelegramBot(token, { polling: true });
+
 
 class App {
   dbUrl = process.env._DB_URL;
