@@ -29,6 +29,17 @@ class UserService {
       console.log('New user not save:', err);
     }
   }
+
+  async updateUserInformation(user, nickName, firstName) {
+    user.numberOfUsages++;
+    user.nickName = nickName;
+    user.firstName = firstName;
+    try {
+      await this.saveUserToDB(user);
+    } catch (err) {
+      console.log('User not updated', err);
+    }
+  }
 }
 
 const userService = new UserService();

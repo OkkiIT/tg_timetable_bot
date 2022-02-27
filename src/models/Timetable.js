@@ -9,5 +9,5 @@ const timeTableSchema = new Schema({
   busID: String,
 });
 
-const TimeTable = mongoose.model('timeTable', timeTableSchema);
-export default TimeTable;
+const Timetable = mongoose.model('timeTable', timeTableSchema);
+export default Timetable;
