@@ -3,6 +3,7 @@ import TelegramBot from 'node-telegram-bot-api';
 import 'dotenv/config';
 import startController from './controllers/start.controller.js';
 import locationController from './controllers/location.controller.js';
+import refreshDBController from './controllers/refreshDB.controller.js';
 const token = process.env._TOKEN;
 export const bot = new TelegramBot(token, { polling: true });
 

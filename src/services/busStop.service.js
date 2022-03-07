@@ -18,6 +18,11 @@ class BusStopService {
     });
     return busStopsWithDistance.sort((a, b) => a.distance - b.distance).slice(0, 2);
   }
+
+  async saveNewBusStops(arr) {
+    await this.busStops.remove();
+    await this.busStops.insertMany(arr);
+  }
 }
 
 const busStopService = new BusStopService();

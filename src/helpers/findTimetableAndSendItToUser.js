@@ -13,7 +13,7 @@ const findTimetableAndSendItToUser = async (busStop, chatId) => {
   const date = new Date();
   let currentHour = date.getHours();
   let currentMin = date.getMinutes();
-  let typeOfTheDay = isWeekend() ? DAY_TYPE.WEEKDAY : DAY_TYPE.WEEKEND;
+  let typeOfTheDay = isWeekend() ? DAY_TYPE.WEEKEND : DAY_TYPE.WEEKDAY;
 
   const busStopRoutesWithTimeTable = [];
 

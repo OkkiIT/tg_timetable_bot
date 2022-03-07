@@ -7,6 +7,11 @@ class TimetableService {
     const timetables = await this.timeTables.find(params, 'timing').lean();
     return { ...route, timetables };
   }
+
+  async saveNewTimetables(arr) {
+    await this.timeTables.remove();
+    await this.timeTables.insertMany(arr);
+  }
 }
 
 const timetableService = new TimetableService();
